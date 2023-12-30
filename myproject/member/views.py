@@ -1,14 +1,30 @@
+from django.shortcuts import render
 from django.http import HttpResponse
-from django.template import loader
 
-def member(request):
-  template = loader.get_template('home.html')
-  return HttpResponse(template.render())
+def index (request):
+  return render(request, "index.html")
 
-def contact(request):
-  template = loader.get_template('contact.html')
-  return HttpResponse(template.render())
+def about (request):
+  return render(request, "about.html")
 
-def picture(request):
-  template = loader.get_template('picture.html')
-  return HttpResponse(template.render())
+def cart (request):
+  return render(request, "cart.html")
+
+def contact (request):
+  return render(request, "contact.html")
+
+def blog (request):
+  return render(request, "blog.html")
+
+def checkout (request):
+  return render(request, "checkout.html")
+
+def services (request):
+  return render(request, "services.html")
+
+def shop (request):
+  return render(request, "shop.html")
+
+def thankyou (request):
+  return render(request, "thankyou.html")
+
